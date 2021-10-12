@@ -1,53 +1,42 @@
-const val appleNo = 50
-const val PI=3.14
-//خليتا برا المين لانه هذي مستحيل تتغير يعني الكونستنت من البدايه لها قيمه
-//  ما تتغير مجرد ما اعطيها القيمه يعني ممكن ما اخلي لها قيمه بس مجرد التشغيل تجيها قيمه من عمليه مثلاval
+//Calcuator
 fun main(args: Array<String>) {
 
+    print("Please enter the first number : ")
+    val number1 = Integer.valueOf(readLine())
 
-    var VarName:Int = 5
+    print("Please enter the sec number : ")
+    val number2 = Integer.valueOf(readLine())
 
-    var number1=5 //without identify the data type
-    var number2=4
-    var number3=number1+number2
-    println(number3)
-
-    var number4="5"
-    var number5="4"
-    var number6=number4+number5
-    println(number6)
-
-    var isNumber=true
-    println(isNumber)
+    print("Please enter the character : ")
+    val scanner = readLine()
 
 
-    var name = "lamia"
-    var score =5
-    score=score+3
-    score+=3 //the good way
-    score*=2
-    println(score)
-
-    var phone=0
-    phone=93
-
-     // val phone2=1111
-    //phone2=9999 هنا خطأ لانه(val)  (var)يعتبر ثابت يعني لو ابغى اغير احط
-    val ID=1110168406
-
-
-   var dozens= appleNo/12
-   var reminderAPP=appleNo%12
-
-
-    println (dozens)
-    println (reminderAPP)
-
-    println ()
-    println ()
-    
-
-
-
+    if(scanner == "+"){ print("The result is : " + (number1+number2) ) }
+    else if (scanner== "*") { print("The result is : " + (number1*number2) ) }
+    else if (scanner== "-") { print("The result is : " + (number1-number2) ) }
+    else if (scanner== "%") { print("The result is : " + (number1%number2) ) }
+    else if (scanner== "/") { print(" The result is : " + (number1/number2) ) }
 
 }
+
+
+//Salary
+fun main(args: Array<String>) {
+
+    print("Enter the salary ")
+    var salary = readLine()!!.toFloat()
+
+    print("Enter the Raise (1=Excellent 2=Good 3=Poor) ")
+    val raise = readLine()!!.toInt()
+
+    if(raise == 1) {
+        salary= (salary+(salary*0.06)).toFloat()
+        println("The new salary is " + salary) }
+    else  if(raise == 2) {
+        salary= (salary+(salary*0.04)).toFloat()
+        println("The new salary is " + salary) }
+    else  if(raise == 3) {
+        salary= (salary+(salary*0.015)).toFloat()
+        println("The new salary is " + salary) }
+    else  if(raise >3 || raise<1) {
+        println("Please enter again!! ") }
