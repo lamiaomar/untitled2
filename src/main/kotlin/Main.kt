@@ -40,7 +40,7 @@ fun main(args: Array<String>) {
    var reminderAPP=appleNo%12
 
 
-    println ("the dozens" +dozens)
+    println ("the dozenskk" +dozens)
     println (reminderAPP)
 
     println ()
